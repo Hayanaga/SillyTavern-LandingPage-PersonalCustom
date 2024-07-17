@@ -448,7 +448,7 @@ const init = () => {
     initSettings();
     onChatChanged();
 };
-init();
+eventSource.on(event_types.APP_READY, init);
 eventSource.on(event_types.CHAT_CHANGED, onChatChanged);
 
 
